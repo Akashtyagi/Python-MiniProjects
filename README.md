@@ -1,5 +1,6 @@
 # Mini-Projects---Python-
 https://akashtyagi08.github.io/Mini-Projects---Python/
+
 A collection of various mini projects made in python that I continue to build as I come across new functionalities in python
 
 List of Python project in the repository so far - 
