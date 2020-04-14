@@ -50,9 +50,9 @@ Lets take an example to convert README.md
 
 **Encode README.md into encoded_readme.md**
 
-![alt_text](url "Encoding README.md")
+![](https://github.com/Akashtyagi08/Mini-Projects---Python/blob/master/Mystic_Encoder/Images/encode_terminal.png "Encoding README.md")
 
 **Decode encoded_readme.md into NEW_README.md**
 
-![alt_text](url "Decoding Readme")
+![](https://github.com/Akashtyagi08/Mini-Projects---Python/blob/master/Mystic_Encoder/Images/decoded_terminal.png "Decoding Readme")
 
