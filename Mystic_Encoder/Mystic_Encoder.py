@@ -133,7 +133,7 @@ def encode_text(text, key):
             Tree Encoding->Extra 0 binary added->Input Encoding. 
     '''    
 #    final_encoding = "{tree_encoding}{key:08b}{bits_less_for_8bit_code:08b}{encoded_text_code}"
-    final_encoding = tree_encoding + "{0:08b}".format(key) + "{0:08b}".format(bits_less_for_8bit_code) + encoded_text_code
+    final_encoding = tree_encoding + "{0:08b}".format(8) + "{0:08b}".format(bits_less_for_8bit_code) + encoded_text_code
     return final_encoding
  
 # =============================================================================
@@ -176,9 +176,9 @@ def decode_encoding(final_encoding, key):
     # Extract key
     key_binary = encoding_array[:8]
     under_key = int("".join(key_binary),2)
-    if under_key != key:
-        print("The Secret key entered is not correct !!!")
-        return None
+    # if under_key != key:
+    #     print("The Secret key entered is not correct !!!")
+    #     return None
     encoding_array = encoding_array[8:]
     
     
@@ -232,7 +232,7 @@ def decode_encoding(final_encoding, key):
             current_node = current_node.right
         
         if current_node.char is not None:
-            decoded_text += chr(ord(current_node.char)-under_key )
+            decoded_text += chr(ord(current_node.char)-key )
             current_node = decoded_hauffman_tree
             
     return decoded_text
