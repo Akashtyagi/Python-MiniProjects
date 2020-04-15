@@ -35,7 +35,7 @@ This scripts take 3 arguments: Operation-to-perform, key, input_file_path, outpu
 
 >     When encoding: value between 0-100
 
->     When decoding: 0
+>     When decoding: Enter the same value that was used during Encoding
 
 > input_file_name: File path including file name on which you want to perform encoding or decoding. 
 

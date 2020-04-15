@@ -168,14 +168,17 @@ def _decode_hauffman_tree(encoding_array):
     return HauffmanNode(None, left= _decode_hauffman_tree(encoding_array), \
                         right= _decode_hauffman_tree(encoding_array))
 
-def decode_encoding(final_encoding):
+def decode_encoding(final_encoding, key):
     # First we extract the Tree Encoding
     encoding_array = list(encoding) # Encoding is converted into array for easy index access
     decoded_hauffman_tree = _decode_hauffman_tree(encoding_array)
     
     # Extract key
     key_binary = encoding_array[:8]
-    key = int("".join(key_binary),2)
+    under_key = int("".join(key_binary),2)
+    if under_key != key:
+        print("The Secret key entered is not correct !!!")
+        return None
     encoding_array = encoding_array[8:]
     
     
@@ -229,7 +232,7 @@ def decode_encoding(final_encoding):
             current_node = current_node.right
         
         if current_node.char is not None:
-            decoded_text += chr(ord(current_node.char)-key)
+            decoded_text += chr(ord(current_node.char)-under_key )
             current_node = decoded_hauffman_tree
             
     return decoded_text
@@ -265,16 +268,17 @@ if method.lower() == "encode":
     
 elif method.lower() == "decode":
     encoding = read_file(input_file)
-    text = decode_encoding(encoding)
-    write_file(output_file,content= text)    
-    print("Your file has been successfuly decode as {}!!".format(output_file))
+    text = decode_encoding(encoding, key)
+    if text is not None:
+        write_file(output_file,content= text)    
+        print("Your file has been successfuly decode as {}!!".format(output_file))
     
 
 #if __name__ == "__main__":
 #    text = "this is demo text called in  the call=for !!"
 #    print("Input Text: ",text)
 #    encoding = encode_text(text,101)
-#    print("Encoding: ",encoding)
-#    decoded_text = decode_encoding(encoding)
+##    print("Encoding: ",encoding)
+#    decoded_text = decode_encoding(encoding, 101)
 #    print("Decoded Text: ",decoded_text)
 
