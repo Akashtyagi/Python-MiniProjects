@@ -6,7 +6,7 @@ A collection of various mini projects made in python that I continue to build as
 List of Python project in the repository so far - 
 1. <b> [Mystic_Encoder](https://github.com/Akashtyagi08/Mini-Projects---Python/tree/master/Mystic_Encoder)</b>         --> A script that can encode and decode any input text file. Encode a file and save it somewhere and then later using decode functionality, decode the same file some point later in time.
 
-2. <b>[Stopwatch](https://github.com/Akashtyagi08/Mini-Projects---Python/tree/master/Timer)</b>         	  --> A terminal Buzzer StopWatch that can be used as always-on-top terminal stopwatch.
+2. <b>[On Screen Timer](https://github.com/Akashtyagi08/Mini-Projects---Python/tree/master/Timer)</b>         	  --> A terminal Buzzer StopWatch that can be used as always-on-top terminal stopwatch.
 
 3. <b>[Resize-them](https://github.com/Akashtyagi08/Mini-Projects---Python/tree/master/Resize_them)</b>             --> Python script that I made just to automate the task of resizing a collection of images to a specific height and width.
 
