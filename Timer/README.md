@@ -1,6 +1,6 @@
-# StopWatch - Timer
+# On-Screen Timer
 
-This script can be used as a Stopwatch.
+This script can be used as a Timer for better productivity.
 ---------------------------------------------------------
 
 
