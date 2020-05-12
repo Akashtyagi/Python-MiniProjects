@@ -1,4 +1,4 @@
-# Mini-Projects---Python-
+# Python-MiniProjects
 https://akashtyagi08.github.io/Mini-Projects---Python/
 
 A collection of various mini projects made in python that I continue to build as I come across new functionalities in python
