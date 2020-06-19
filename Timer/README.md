@@ -1,6 +1,6 @@
-# StopWatch - Timer
+# On-Screen Timer
 
-This script can be used as a Stopwatch.
+This script can be used as a Timer for better productivity.
 ---------------------------------------------------------
 
 
@@ -19,7 +19,7 @@ Here are few glimpse of the script-
 
 **Timer with Note**
 
-![](https://github.com/Akashtyagi08/Mini-Projects---Python/blob/master/Timer/Images/timer.png "Timer with Note")
+![](https://github.com/Akashtyagi08/Mini-Projects---Python/blob/master/Timer/Images/timer1.png "Timer with Note")
 
 **Different Input Format - Without Note**
 
