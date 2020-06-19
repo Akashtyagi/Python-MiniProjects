@@ -27,6 +27,8 @@ total_sec = 00
 input_hours = 00
 input_minutes = 00
 input_seconds = 00
+
+# Convert Input
 for i in range(len(time_array)-1, -1, -1):
     if i == len(time_array)-1:
         # Seconds
@@ -69,24 +71,38 @@ current_time = 0
 g = 99
 start_time = dt.datetime.today()
 
-while current_time < total_sec:
-    time.sleep(0.1)
-    # print(total_hours,total_minutes,total_seconds)
-    curr_diff = round(dt.datetime.today().timestamp() - start_time.timestamp(), 0)
-    if curr_diff != g:
-        g = curr_diff
-        if total_seconds < 59:
-            total_seconds += 1
-        elif total_minutes < 59:
-            total_seconds = 0
-            total_minutes += 1
-        else:
-            total_seconds = 0
-            total_minutes = 0
-            total_hours += 1
-        print(f" Time: {total_hours}:{total_minutes}:{total_seconds}", end="\r")
-        current_time += 1
+# Time calculation
+try:
+	while current_time < total_sec:
+	    time.sleep(0.1)
+	    # print(total_hours,total_minutes,total_seconds)
+	    curr_diff = round(dt.datetime.today().timestamp() - start_time.timestamp(), 0)
+	    if curr_diff != g:
+	        g = curr_diff
+	        if total_seconds < 59:
+	            total_seconds += 1
+	        elif total_minutes < 59:
+	            total_seconds = 0
+	            total_minutes += 1
+	        else:
+	            total_seconds = 0
+	            total_minutes = 0
+	            total_hours += 1
+	        print(f" Time: {total_hours}:{total_minutes}:{total_seconds}", end="\r")
+	        current_time += 1
+except (KeyboardInterrupt, SystemExit):
+	print("="*40)
+	print("!!! Timer STOPPED !!!")
+	print("\nDetails")
+	print("-------")
+	print(f"Started At: {start_time.hour}:{start_time.minute}")
+	print(f"Finished At: {dt.datetime.today().hour}:{dt.datetime.today().minute}")
+	print(f"Total Time spent:  {dt.datetime.today().hour - start_time.hour}H:{dt.datetime.today().minute - start_time.minute}M")
+	sys.exit(0)
 
+
+
+	# When stopped midway
 print("="*40)
 print("Timer Finished !!!")
 
@@ -95,7 +111,7 @@ print("-------")
 print(f"Started At: {start_time.hour}:{start_time.minute}")
 print(f"Finished At: {dt.datetime.today().hour}:{dt.datetime.today().minute}")
 print(f"Total Time spent:  {input_hours}H:{input_minutes}M:{input_seconds}S")
-play_sound()
+# play_sound()
 
 
 # import time
